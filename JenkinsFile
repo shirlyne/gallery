@@ -38,7 +38,7 @@ stage('Tests') {
 }
   }
   post{
-    always{
+    failure{
         emailext to: "shalloomondi@outlook.com",
         body: "this is test email",
                 subject: "test"

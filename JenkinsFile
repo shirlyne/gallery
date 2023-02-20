@@ -1,0 +1,39 @@
+pipeline {
+agent any
+tools{
+    nodejs "NodeJS"
+}
+stages { 
+    stage('clone repository') {
+      steps { 
+        git 'https://github.com/shirlyne/gallery.git'
+      }
+    }
+    stage('Build project') {
+     steps { 
+    sh 'npm install'
+    sh 'npm install body-parser'
+    sh 'npm install multer'
+sh ' npm install mocha'
+sh 'npm install chai-http'
+sh 'npm install chai'
+sh 'npm install uuid'
+sh 'npm install mongodb'
+sh 'npm install express'
+sh 'npm install ejs'
+sh 'npm install mongoose'
+
+  }
+}
+stage('Tests') {
+  steps { 
+    sh 'npm test'
+  }
+  stage('deploy') {
+  steps { 
+    echo"this is where we deploy"
+    
+  }
+}
+  }
+}

@@ -41,7 +41,7 @@ stage('Tests') {
     always{
         emailext to: "shalloomondi@outlook.com",
         body: "this is test email",
-                subject: "test",
+                subject: "test"
     }
   }
 }

@@ -39,7 +39,7 @@ stage('Tests') {
   }
   post{
     always{
-        emailext to: "shalloomondi@outlook.com"
+        emailext to: "shalloomondi@outlook.com",
         body: "this is test email",
                 subject: "test",
     }

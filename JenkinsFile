@@ -40,8 +40,8 @@ stage('Tests') {
   post{
     failure{
         emailext to: "shalloomondi@outlook.com",
-        body: "pipeline failed,${JOB_NAME} , ${BUILD_NUMBER} , ${BUILD_URL}"
-                subject: "build failed"
+        body: "pipeline failed,${JOB_NAME} , ${BUILD_NUMBER} , ${BUILD_URL}",
+                subject: "build failed",
     }
   }
 }

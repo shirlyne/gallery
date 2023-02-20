@@ -29,6 +29,7 @@ stage('Tests') {
   steps { 
     sh 'npm test'
   }
+}
   stage('deploy') {
   steps { 
     echo"this is where we deploy"

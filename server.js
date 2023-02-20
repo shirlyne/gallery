@@ -10,6 +10,28 @@ let image = require('./routes/image');
 
 // Initializing the app
 const app = express();
+<<<<<<< HEAD
+=======
+
+// connecting the database
+
+const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true  },(err)=>{
+    if (err) {
+        console.log(err)
+    }else{
+        console.log(`Connected to Database: ${MONGODB_URI}`)
+    }
+});
+
+// test if the database has connected successfully
+// let db = mongoose.connection;
+// db.once('open', ()=>{
+//     console.log('Database connected successfully')
+// })
+
+
+>>>>>>> test
 
 // connecting the database
 const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
@@ -38,4 +60,8 @@ app.listen(PORT,() =>{
 });
 
 
+<<<<<<< HEAD
 module.exports = app;
+=======
+module.exports = app;
+>>>>>>> test

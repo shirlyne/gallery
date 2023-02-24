@@ -58,7 +58,7 @@ stage('Tests') {
         body: "pipeline failed,${JOB_NAME} , ${BUILD_NUMBER} , ${BUILD_URL}",
                 subject: "build successful"
 
-                slackSend color: "red", message: "Message from Jenkins Pipeline"
+                slackSend color: "red", message: "Message from Jenkins Pipeline ,${JOB_NAME} , ${BUILD_NUMBER}, the site link is https://gallery-d22n.onrender.com/"
     }
   }
 }

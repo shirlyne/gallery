@@ -30,7 +30,7 @@ stages {
    sh 'npm install express'
    sh 'npm install ejs'
    sh 'npm install mongoose'
-
+sh 'npm install yarn'
   }
 }
 stage('Tests') {

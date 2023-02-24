@@ -22,14 +22,14 @@ stages {
     sh 'npm install'
     sh 'npm install body-parser'
     sh 'npm install multer'
-sh ' npm install mocha'
-sh 'npm install chai-http'
-sh 'npm install chai'
-sh 'npm install uuid'
-sh 'npm install mongodb'
-sh 'npm install express'
-sh 'npm install ejs'
-sh 'npm install mongoose'
+   sh ' npm install mocha'
+   sh 'npm install chai-http'
+   sh 'npm install chai'
+   sh 'npm install uuid'
+   sh 'npm install mongodb'
+   sh 'npm install express'
+   sh 'npm install ejs'
+   sh 'npm install mongoose'
 
   }
 }
@@ -42,10 +42,9 @@ stage('Tests') {
   steps { 
      sh 'curl -X POST https://api.render.com/deploy/srv-cfs897en6mplppfo50c0?key=8zA3hq2uyJg&ref=$COMMIT'
     
-    
   }
 }
- 
+}
   post{
     failure{
         emailext to: "shalloomondi@outlook.com",
@@ -63,3 +62,4 @@ stage('Tests') {
     }
   }
 }
+    

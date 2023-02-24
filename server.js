@@ -38,8 +38,4 @@ app.listen(PORT,() =>{
 });
 
 
-<<<<<<< HEAD
 module.exports = app;
-=======
-module.exports = app;
->>>>>>> test
